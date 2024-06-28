@@ -6,22 +6,15 @@ Title: Enhancing User Experience with Netflix Movie Titles and Reviews through C
 Background:
 Netflix offers a vast library of movies, which can be overwhelming for users to navigate. Users often spend a significant amount of time browsing through titles, seeking information about the movies, and looking for reviews to make informed decisions about what to watch. The current process can be time-consuming and may not always lead to satisfactory viewing choices.
 
-Objective:
-The goal is to develop a solution that allows users to quickly and efficiently obtain information about Netflix movie titles, including synopses and reviews, through an interactive chatbot. This chatbot will serve as a personalized guide, helping users to discover new movies and make viewing decisions based on reliable reviews.
-
 Problem:
 Users need a more streamlined and interactive way to access information about Netflix movie titles and reviews without having to manually search through the platform or external review sites. The lack of immediate assistance and personalized recommendations can lead to user frustration and a suboptimal viewing experience.
 
 Solution:
 Implement a chatbot that integrates with Netflix's database to provide users with instant access to movie titles, descriptions, and aggregated reviews. The chatbot will use natural language processing to understand user queries and respond with relevant information. It will also offer a feature to rate movies and provide feedback, enhancing the recommendation system for future interactions.
 
-Expected Outcome:
-The introduction of the chatbot is expected to significantly improve user satisfaction by reducing the time spent on searching for movies and reading through reviews. It will provide a more engaging and user-friendly way to explore Netflix's content, leading to a more enjoyable and tailored viewing experience.
-
-
 **Collecting Data:**
 
-We collected open data from <https://www.kaggle.com/datasets/shivamb/netflix-shows?select=netflix_titles.csv> which has FAQ data and policies. we transformed the data into combined objects of reviews 
+We collected open data from <https://www.kaggle.com/datasets/shivamb/netflix-shows?select=netflix_titles.csv> which has netflix movies titles and content. we transformed the data into combined objects of reviews 
 
 ```json
  {
@@ -43,14 +36,13 @@ We collected open data from <https://www.kaggle.com/datasets/shivamb/netflix-sho
     }
 ```
 
-We have converted data into chunks. so that the data is easy to index during RAG.
+We have converted data into chunks.
 
 **Building RAG with your own Data**
 
-We have used azure open ai playground to deploy gpt 3.5 turbo model and datasource with upload options into the storage account. We have give the system a message of "You are an AI assistant to provde moview review"
+We have used azure open ai playground to deploy gpt 3.5 turbo model and datasource with upload options into the storage account. We have give the system a message of "You are an AI assistant to provide moview review"
 
-<img width="1783" alt="image" src="![image](https://github.com/deviceshome/openaihackathoneyjune28-groupE/assets/132071282/d353b9e7-6493-4582-b27c-3321de62734a)
-">
+<img width="1783" alt="image" src=".\netflix\hack4.PNG">
 
 
 **Deploying the Model and Consuming in client application**
@@ -61,11 +53,12 @@ We used webapp deploy option available in playground with F1 tier, which was the
 
 We have tried following examples and system started responding with right results with citation.
 
-
-1.
-2.
-3
-<img width="1792" alt="image" src="">
+1.How many movie titles in database?
+2.How many PG-13 movies with you?
+3. Which mvie is based on blackhole of universe?
+<img width="1792" alt="image" src=".\netflix\hack1.PNG">
+<img width="1792" alt="image" src=".\netflix\hack3.PNG">
+<img width="1792" alt="image" src=".\netflix\hack5.PNG">
 
 
 
