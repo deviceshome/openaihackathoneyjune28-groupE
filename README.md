@@ -61,6 +61,16 @@ We have tried following examples and system started responding with right result
 <img width="1792" alt="image" src=".\netflix\hack5.PNG">
 
 
+**Machine Learning**
+Analysing the raw data to calculate diabetes results by prediction of parameters.
+
+
+<img width="1792" alt="image" src=".\ml\image (1).png">
+<img width="1792" alt="image" src=".\ml\image (2).png">
+<img width="1792" alt="image" src=".\ml\image (3).png">
+
+
+
 
 
 
